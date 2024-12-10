@@ -1,0 +1,26 @@
+# Memphis Blight and Litter 2024 – Final GIS Project
+
+## Overview
+The objective of this project is to investigate the **relationship between blighted areas** and **litter** in **Memphis, TN**, specifically for the year **2024**. The aim was to analyze the spatial distribution of **litter** and determine if areas with higher levels of **blight** are more prone to increased littering. This study involves the use of **geospatial analysis** techniques, primarily using **GeoPandas** and **ArcGIS Pro**, to explore correlations and visualize the spatial relationship between these two variables.
+
+## Methodology
+
+### Data Collection and Preparation
+We utilized various datasets for **blighted areas** and **litter** (dumping locations), which were loaded from the **Memphis Data Hub** and **ArcGIS Pro**. The data was initially in a **geographic coordinate system** (WGS84), but to perform accurate analysis, it was reprojected into a **projected CRS** (EPSG:3857, Web Mercator). This re-projection was necessary for performing buffer analysis and other geometric operations.
+
+```python
+import geopandas as gpd
+
+# Load the shapefiles for blighted areas and litter data
+blighted_areas = gpd.read_file(r"C:\path_to_data\blighted_areas.shp")
+litter_data = gpd.read_file(r"C:\path_to_data\litter_data.shp")
+
+# Reproject to a projected CRS (EPSG:3857 for Web Mercator)
+blighted_areas_projected = blighted_areas.to_crs(epsg=3857)
+litter_data_projected = litter_data.to_crs(epsg=3857)
+
+Buffer Analysis
+A buffer of 100 meters was created around each blighted area to determine the proximity of litter to these areas. Buffers were essential to examine how close litter was to the blighted areas, helping to visualize potential hotspots.
+
+python
+Copy code
