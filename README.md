@@ -1,4 +1,3 @@
-
 # Memphis Blight and Litter 2024 – Final GIS Project
 
 ## Overview
@@ -34,6 +33,8 @@ blighted_areas_projected['buffer'].plot(ax=ax, color='red', alpha=0.3)
 plt.title("Blighted Areas with 100m Buffer")
 plt.show()
 ```
+![Buffer](https://github.com/user-attachments/assets/1b31e6d0-a32f-49f9-a2da-7db45ee6551f)
+
 ## Spatial Join
 A spatial join was performed to identify litter points that fall within the blighted area buffers. This allowed us to assess how much of the litter overlapped with blighted areas.
 ```python
@@ -65,9 +66,13 @@ plt.title("Litter and Blighted Areas in Memphis (2024)")
 plt.legend()
 plt.show()
 ```
+![Spatial join](https://github.com/user-attachments/assets/2f390777-a018-4cbc-8f7a-b1140b608258)
+
 ArcGIS Pro vs. Python Analysis
 In ArcGIS Pro, we observed that around 84% of the litter occurred within blighted areas. This high percentage suggests that the relationship between blight and litter is strong at the local scale, where most litter tends to accumulate near blighted areas.
 However, in the Python-based analysis, the Pearson correlation was much lower (-0.044), indicating a weak correlation.
+![Picture1](https://github.com/user-attachments/assets/5dc7dafa-9563-4a47-a795-0b35510d818a)
+
 ## Why the Discrepancy?
 The Pearson correlation from the Python code suggests a weak relationship between blight and litter, which could be attributed to several factors:
 
