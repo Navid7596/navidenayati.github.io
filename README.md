@@ -1,4 +1,4 @@
-# navidenayati.github.io
+# Navid Enayati
 
 ## Project Title: Memphis Blight and Litter 2024 - Final GIS Project
 
