@@ -12,8 +12,8 @@ We utilized various datasets for **blighted areas** and **litter** (dumping loca
 import geopandas as gpd
 
 # Load the shapefiles for blighted areas and litter data
-blighted_areas = gpd.read_file(r"C:\path_to_data\blighted_areas.shp")
-litter_data = gpd.read_file(r"C:\path_to_data\litter_data.shp")
+blighted_areas = gpd.read_file(r"C:\Users\simani\OneDrive - The University of Memphis\Attachments\Navid\OUTPUT\blighted_areas.shp")
+litter_data = gpd.read_file(r"C:\Users\simani\OneDrive - The University of Memphis\Attachments\Navid\OUTPUT\litter_data.shp")
 
 # Reproject to a projected CRS (EPSG:3857 for Web Mercator)
 blighted_areas_projected = blighted_areas.to_crs(epsg=3857)
